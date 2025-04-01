@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Path to Awareness and Growth</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="main-header">
+            <div class="header-content">
+                <h1>Path to Awareness and Growth</h1>
+                <p class="header-subtitle">Begin your journey to self-discovery</p>
+            </div>
+        </header>
+
+        <nav class="main-nav">
+            <a href="home.html" class="nav-button">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="plan.html" class="nav-button">
+                <i class="fas fa-map"></i>
+                <span>Plan</span>
+            </a>
+            <a href="bible.html" class="nav-button">
+                <i class="fas fa-book"></i>
+                <span>Bible</span>
+            </a>
+            <a href="resources.html" class="nav-button active">
+                <i class="fas fa-cube"></i>
+                <span>Resources</span>
+            </a>
+        </nav>
+
+        <main class="main-content">
+            <div class="section-header">
+                <h2>Growth Resources</h2>
+                <p>Tools and content to support your journey</p>
+            </div>
+            
+            <div class="resources-grid">
+                <div class="resource-section">
+                    <h3>Guided Videos</h3>
+                    <div class="video-grid">
+                        <div class="video-card">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/nfiJWCxp0sY" 
+                                    title="Guided Meditation for Inner Peace"
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <h4>Guided Meditation</h4>
+                            <p>Find inner peace through guided meditation</p>
+                        </div>
+                        <div class="video-card">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/VdVEPxBwf7Y" 
+                                    title="Finding Your Life Purpose"
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <h4>Life Purpose</h4>
+                            <p>Discover your true calling and purpose</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resource-section">
+                    <h3>Recommended Reading</h3>
+                    <div class="article-grid">
+                        <a href="#" class="article-card">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Understanding Self-Awareness</h4>
+                            <p>Learn the fundamentals of self-discovery</p>
+                        </a>
+                        <a href="#" class="article-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Building Resilience</h4>
+                            <p>Develop strength through life's challenges</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- AI Chat Feature -->
+        <div class="chat-widget">
+            <button class="chat-toggle" aria-label="Toggle chat">
+                <i class="fas fa-comments"></i>
+            </button>
+            
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h3>Spiritual Guide</h3>
+                    <div class="chat-actions">
+                        <button class="settings-button" title="Settings">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                        <button class="close-chat" title="Close">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="chat-messages"></div>
+                
+                <div class="chat-input-container">
+                    <textarea class="chat-input" placeholder="Share your thoughts..." rows="3"></textarea>
+                    <button class="send-message" title="Send">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html> 

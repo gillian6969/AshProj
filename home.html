@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Path to Awareness and Growth</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="bubble-background">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+    <div class="app-container">
+        <header class="main-header">
+            <div class="header-content">
+                <div class="header-title-container">
+                    <h1>Path to Awareness and Growth</h1>
+                    <img src="https://scontent.fmnl17-7.fna.fbcdn.net/v/t1.15752-9/480023749_2028812964285065_3089753549494548426_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeGPba8JZk0kE7UqCBPlrs2Ta_cqTvDQCRNr9ypO8NAJE5Awl9H8U3KVsH45wZmUdBGEdiU_JEp_BkUQz86D677H&_nc_ohc=jFzkVazauv8Q7kNvgEoopwE&_nc_oc=Adn3qJ1YBw8TLB1uFb54UF0TRmwBSzQ_JQPTRzrByHiFY1wgjAgxgu46qcPg4RDdloo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl17-7.fna&oh=03_Q7cD1wEcVyd6qDk12PoaFz3_5DaF0R6x-yYwz2p9IyOnO4LTCA&oe=680A4BD1" alt="Awareness and Growth" class="header-image">
+                </div>
+                <p class="header-subtitle">Begin your journey to self-discovery</p>
+                <!-- Add profile container -->
+                <div id="profileContainer" class="profile-container">
+                    <div class="profile-wrapper">
+                        <img id="profilePicture" alt="Profile" class="profile-picture">
+                        <div id="profileMenu" class="profile-menu">
+                            <div class="profile-menu-item" onclick="openMyAccountModal()">
+                                My Account
+                            </div>
+                            <div class="profile-menu-logout" onclick="logout()">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Logout</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span id="userEmail" class="user-email"></span>
+                </div>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                </button>
+            </div>
+        </header>
+
+        <nav class="main-nav">
+            <a href="home.html" class="nav-button active" target="_self">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="plan.html" class="nav-button" target="_self">
+                <i class="fas fa-map"></i>
+                <span>Plan</span>
+            </a>
+            <a href="bible.html" class="nav-button" target="_self">
+                <i class="fas fa-book"></i>
+                <span>Bible</span>
+            </a>
+            <a href="contacts.html" class="nav-button" target="_self">
+                <i class="fas fa-address-book"></i>
+                <span>Contacts</span>
+            </a>
+        </nav>
+
+        <main class="main-content">
+            <!-- Login Notification Banner -->
+            <div id="loginNotification" class="login-notification">
+                <div class="login-notification-content">
+                    <i class="fas fa-user-circle login-notification-icon"></i>
+                    <span class="login-notification-message">Welcome! Please log in or continue as anonymous</span>
+                </div>
+                <div class="login-notification-buttons">
+                    <button onclick="showLoginForm()" class="login-btn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Login
+                    </button>
+                    <button onclick="stayAnonymous()" class="anonymous-btn">
+                        <i class="fas fa-user-secret"></i>
+                        Stay Anonymous
+                    </button>
+                </div>
+                <div id="loginForm" class="login-form" style="display: none;">
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required class="form-input" placeholder="Enter your email">
+                    </div>
+                    <div class="form-field">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required class="form-input" placeholder="Enter your password">
+                    </div>
+                    <button onclick="handleLogin()" class="submit-btn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Sign In
+                    </button>
+                </div>
+            </div>
+
+            <div class="section-header">
+                <h2>Welcome to Your Journey</h2>
+                <p>Discover your path to personal growth and spiritual awareness</p>
+            </div>
+            
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <i class="fas fa-sun"></i>
+                    <h3>Daily Reflection</h3>
+                    <p>Take time each day to reflect on your progress and set intentions for growth.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Mindful Practice</h3>
+                    <p>Learn techniques for staying present and aware in your daily life.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-dove"></i>
+                    <h3>Spiritual Growth</h3>
+                    <p>Connect with your spiritual side through guided practices and reflection.</p>
+                </div>
+            </div>
+
+            <!-- Social Issues Support Section -->
+            <div class="support-section mt-4">
+                <div class="section-header">
+                    <h2>Support & Guidance</h2>
+                    <p>Find help and resources for challenging social situations</p>
+                </div>
+
+                <div class="support-grid">
+                    <div class="support-card resources" style="cursor: pointer;" onclick="openSexualHarassmentModal()">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Sexual Harassment</h3>
+                        <p>Understanding and preventing sexual harassment</p>
+                        <ul class="resource-list">
+                            <li>What constitutes harassment</li>
+                            <li>Common warning signs</li>
+                            <li>Prevention strategies</li>
+                            <li>Your rights and protections</li>
+                            <li>Creating safe environments</li>
+                            <li>Reporting procedures</li>
+                        </ul>
+                        <div class="video-hint mt-3">
+                            <i class="fas fa-arrow-right"></i>
+                            <span>Click to learn more</span>
+                        </div>
+                    </div>
+
+                    <div class="support-card resources" style="cursor: pointer;" onclick="openCyberbullyingModal()">
+                        <i class="fas fa-globe"></i>
+                        <h3>Cyberbullying</h3>
+                        <p>Protection against online harassment and bullying</p>
+                        <ul class="resource-list">
+                            <li>Report online harassment</li>
+                            <li>Digital safety guides</li>
+                            <li>Block and report tools</li>
+                            <li>Support networks</li>
+                            <li>Online safety tips</li>
+                            <li>Digital well-being</li>
+                        </ul>
+                        <div class="video-hint mt-3">
+                            <i class="fas fa-arrow-right"></i>
+                            <span>Click to learn more</span>
+                        </div>
+                    </div>
+
+                    <div class="support-card" style="cursor: pointer; background: var(--accent);" onclick="openPeerPressureModal()">
+                        <i class="fas fa-users"></i>
+                        <h3>Peer Pressure</h3>
+                        <p>Learn to handle social pressure and make confident choices</p>
+                        <ul class="resource-list">
+                            <li>Understanding social media influence</li>
+                            <li>Recognizing peer pressure signs</li>
+                            <li>Building resilience</li>
+                            <li>Making independent choices</li>
+                        </ul>
+                        <div class="video-hint mt-3">
+                            <i class="fas fa-arrow-right"></i>
+                            <span>Click to learn more</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="support-grid mt-4">
+                    <div class="support-card" style="cursor: pointer; background: var(--accent);" onclick="openHarmfulPranksModal()">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>Harmful Pranks</h3>
+                        <p>Addressing and preventing harmful pranks and bullying</p>
+                        <ul class="resource-list">
+                            <li>Recognizing harmful behavior</li>
+                            <li>Speaking up safely</li>
+                            <li>Getting help</li>
+                            <li>Supporting others</li>
+                        </ul>
+                        <div class="video-hint mt-3">
+                            <i class="fas fa-arrow-right"></i>
+                            <span>Click to learn more</span>
+                        </div>
+                    </div>
+
+                    <div class="support-card" style="cursor: pointer; background: var(--accent);" onclick="openSocialMediaModal()">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Social Media Addiction</h3>
+                        <p>Balance your digital life and well-being</p>
+                        <ul class="resource-list">
+                            <li>Digital wellness tips</li>
+                            <li>Screen time management</li>
+                            <li>Healthy online habits</li>
+                            <li>Mindful browsing</li>
+                        </ul>
+                        <div class="video-hint mt-3">
+                            <i class="fas fa-arrow-right"></i>
+                            <span>Click to learn more</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="confidential-notice">
+                    <i class="fas fa-lock"></i>
+                    <p>All communications are strictly confidential. Your safety and well-being are our top priority.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Chat Feature -->
+        <div class="chat-widget">
+            <button class="chat-toggle" aria-label="Toggle chat">
+                <i class="fas fa-comments"></i>
+            </button>
+            
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chat-header-content">
+                        <img src="https://api.dicebear.com/7.x/bottts/svg?seed=happycat&backgroundColor=b6e3f4" alt="Happy Cat" class="chat-header-image">
+                        <h3>Spiritual Guide</h3>
+                    </div>
+                    <div class="chat-actions">
+                        <button class="settings-button" title="Settings">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                        <button class="close-chat" title="Close">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="chat-messages"></div>
+                
+                <div class="chat-input-container">
+                    <textarea class="chat-input" placeholder="Share your thoughts..." rows="3"></textarea>
+                    <button class="send-message" title="Send">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sexual Harassment Modal -->
+    <div id="sexualHarassmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeSexualHarassmentModal()">&times;</span>
+            <h2>Understanding Sexual Harassment</h2>
+            
+            <div class="action-group">
+                <h3><i class="fas fa-exclamation-circle"></i> What is Sexual Harassment?</h3>
+                <ul class="action-list">
+                    <li>Unwanted sexual advances or requests for sexual favors</li>
+                    <li>Verbal or physical conduct of a sexual nature</li>
+                    <li>Creating a hostile or intimidating environment</li>
+                    <li>Using position of power to coerce or manipulate</li>
+                </ul>
+            </div>
+
+            <div class="action-group">
+                <h3><i class="fas fa-shield-alt"></i> Prevention & Protection</h3>
+                <ul class="action-list">
+                    <li>Know your rights and boundaries</li>
+                    <li>Document incidents and keep records</li>
+                    <li>Report to appropriate authorities</li>
+                    <li>Seek support from trusted individuals</li>
+                </ul>
+            </div>
+
+            <div class="action-group">
+                <h3><i class="fas fa-hands-helping"></i> Support Resources</h3>
+                <ul class="action-list">
+                    <li>24/7 National Sexual Assault Hotline: 800-656-HOPE</li>
+                    <li>Online Chat Support: RAINN.org</li>
+                    <li>Local counseling and advocacy services</li>
+                    <li>Legal aid and victim services</li>
+                </ul>
+            </div>
+
+            <div class="action-group">
+                <h3><i class="fas fa-video"></i> Educational Videos</h3>
+                <div class="video-grid" style="display: grid; gap: 4rem;">
+                    <div>
+                        <h4 style="margin-bottom: 2rem; color: var(--primary-dark); font-size: 1.4rem; text-align: center;">Understanding Sexual Harassment</h4>
+                        <div class="video-wrapper" style="position: relative; padding-bottom: 85%; height: 0; overflow: hidden; border-radius: var(--radius-sm); box-shadow: var(--shadow-lg);">
+                            <iframe 
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                                src="https://www.youtube.com/embed/nfiJWCxp0sY"
+                                title="Understanding Sexual Harassment"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 2rem; color: var(--primary-dark); font-size: 1.4rem; text-align: center;">Preventing Sexual Harassment</h4>
+                        <div class="video-wrapper" style="position: relative; padding-bottom: 85%; height: 0; overflow: hidden; border-radius: var(--radius-sm); box-shadow: var(--shadow-lg);">
+                            <iframe 
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                                src="https://www.youtube.com/embed/VdVEPxBwf7Y"
+                                title="Preventing Sexual Harassment"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 2rem; color: var(--primary-dark); font-size: 1.4rem; text-align: center;">Responding to Sexual Harassment</h4>
+                        <div class="video-wrapper" style="position: relative; padding-bottom: 85%; height: 0; overflow: hidden; border-radius: var(--radius-sm); box-shadow: var(--shadow-lg);">
+                            <iframe 
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                                src="https://www.youtube.com/embed/Q7gNUSLOZXg"
+                                title="Responding to Sexual Harassment"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 2rem; color: var(--primary-dark); font-size: 1.4rem; text-align: center;">Additional Resources on Sexual Harassment</h4>
+                        <div class="video-wrapper" style="position: relative; padding-bottom: 85%; height: 0; overflow: hidden; border-radius: var(--radius-sm); box-shadow: var(--shadow-lg);">
+                            <iframe 
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                                src="https://www.youtube.com/embed/yhM3pyA7NJ0"
+                                title="Additional Resources on Sexual Harassment"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Peer Pressure Modal -->
+    <div id="peerPressureModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closePeerPressureModal()">&times;</span>
+            <h2>Understanding Social Media Peer Pressure</h2>
+            
+            <div class="action-group">
+                <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
+                    Peer pressure in social media influences behavior, choices, and self-perception, both positively and negatively. It can be direct (encouragement from friends or influencers) or indirect (seeing trends and feeling the need to conform). While it can promote good habits, it also leads to issues like anxiety, risky behavior, and excessive spending.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
+                    To handle social media peer pressure, think before acting, limit screen time, follow positive influences, be yourself, and seek support if needed. Social media should be a space for connection, not stress.
+                </p>
+                <div class="video-wrapper" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius-sm);">
+                    <iframe 
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                        src="https://www.youtube.com/embed/PdiFk5DVJ6o"
+                        title="Understanding Peer Pressure"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cyberbullying Modal -->
+    <div id="cyberbullyingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeCyberbullyingModal()">&times;</span>
+            <h2>Understanding & Preventing Cyberbullying</h2>
+            
+            <div class="action-group">
+                <h3><i class="fas fa-exclamation-circle"></i> What is Cyberbullying?</h3>
+                <ul class="action-list">
+                    <li>Online harassment through social media, messaging, or email</li>
+                    <li>Sharing harmful or false content about someone</li>
+                    <li>Making threats or intimidating others online</li>
+                    <li>Creating fake profiles to harm someone's reputation</li>
+                </ul>
+            </div>
+
+            <div class="action-group">
+                <h3><i class="fas fa-shield-alt"></i> Prevention & Protection</h3>
+                <ul class="action-list">
+                    <li>Use strong privacy settings on social media</li>
+                    <li>Think before sharing personal information</li>
+                    <li>Keep evidence of cyberbullying incidents</li>
+                    <li>Block and report abusive accounts</li>
+                </ul>
+            </div>
+
+            <div class="action-group">
+                <h3><i class="fas fa-hands-helping"></i> Support Resources</h3>
+                <ul class="action-list">
+                    <li>Cyberbullying Hotline: 1-800-273-8255</li>
+                    <li>Online Support: StopBullying.gov</li>
+                    <li>School counseling services</li>
+                    <li>Digital safety organizations</li>
+                </ul>
+            </div>
+
+            <div class="action-group">
+                <h3><i class="fas fa-video"></i> Educational Videos</h3>
+                <div class="video-grid" style="display: grid; gap: 4rem;">
+                    <div>
+                        <h4 style="margin-bottom: 2rem; color: var(--primary-dark); font-size: 1.4rem; text-align: center;">Understanding Cyberbullying</h4>
+                        <div class="video-wrapper" style="position: relative; padding-bottom: 85%; height: 0; overflow: hidden; border-radius: var(--radius-sm); box-shadow: var(--shadow-lg);">
+                            <iframe 
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                                src="https://www.youtube.com/embed/6ctd75a7_Yw"
+                                title="Understanding Cyberbullying"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 2rem; color: var(--primary-dark); font-size: 1.4rem; text-align: center;">Digital Safety Tips</h4>
+                        <div class="video-wrapper" style="position: relative; padding-bottom: 85%; height: 0; overflow: hidden; border-radius: var(--radius-sm); box-shadow: var(--shadow-lg);">
+                            <iframe 
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                                src="https://www.youtube.com/embed/T_Jwlxd-9Ug"
+                                title="Digital Safety Tips"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Harmful Pranks Modal -->
+    <div id="harmfulPranksModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeHarmfulPranksModal()">&times;</span>
+            <h2>Understanding & Preventing Harmful Pranks</h2>
+            
+            <div class="action-group">
+                <h3><i class="fas fa-exclamation-circle"></i> What are Harmful Pranks?</h3>
+                <ul class="action-list">
+                    <li>Actions that cause physical or emotional harm</li>
+                    <li>Pranks that damage property or reputation</li>
+                    <li>Social media challenges that promote dangerous behavior</li>
+                    <li>Unwanted recordings or sharing of embarrassing moments</li>
+                </ul>
+            </div>
+
+            <div class="action-group">
+                <h3><i class="fas fa-shield-alt"></i> Prevention & Protection</h3>
+                <ul class="action-list">
+                    <li>Think before participating in trends or challenges</li>
+                    <li>Consider the consequences of your actions</li>
+                    <li>Respect others' boundaries and dignity</li>
+                    <li>Report dangerous pranks to authorities</li>
+                </ul>
+            </div>
+
+            <div class="action-group">
+                <h3><i class="fas fa-hands-helping"></i> Support Resources</h3>
+                <ul class="action-list">
+                    <li>School Counseling Services</li>
+                    <li>Anti-Bullying Hotline: 1-800-273-8255</li>
+                    <li>Online Safety Resources</li>
+                    <li>Legal Aid for Victims</li>
+                </ul>
+            </div>
+
+            <div class="action-group">
+                <h3><i class="fas fa-video"></i> Educational Videos</h3>
+                <div class="video-grid" style="display: grid; gap: 4rem;">
+                    <div>
+                        <h4 style="margin-bottom: 2rem; color: var(--primary-dark); font-size: 1.4rem; text-align: center;">Understanding Harmful Pranks</h4>
+                        <div class="video-wrapper" style="position: relative; padding-bottom: 85%; height: 0; overflow: hidden; border-radius: var(--radius-sm); box-shadow: var(--shadow-lg);">
+                            <iframe 
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                                title="Understanding Harmful Pranks"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 2rem; color: var(--primary-dark); font-size: 1.4rem; text-align: center;">Preventing Harmful Behavior</h4>
+                        <div class="video-wrapper" style="position: relative; padding-bottom: 85%; height: 0; overflow: hidden; border-radius: var(--radius-sm); box-shadow: var(--shadow-lg);">
+                            <iframe 
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                                title="Preventing Harmful Behavior"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Media Addiction Modal -->
+    <div id="socialMediaModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeSocialMediaModal()">&times;</span>
+            <h2>Understanding & Managing Social Media Addiction</h2>
+            
+            <div class="action-group">
+                <h3><i class="fas fa-exclamation-circle"></i> Signs of Social Media Addiction</h3>
+                <ul class="action-list">
+                    <li>Constantly checking social media platforms</li>
+                    <li>Feeling anxious when unable to access social media</li>
+                    <li>Losing track of time while online</li>
+                    <li>Neglecting real-life relationships and responsibilities</li>
+                    <li>Comparing yourself to others online frequently</li>
+                    <li>Using social media to escape from problems</li>
+                </ul>
+            </div>
+
+            <div class="action-group">
+                <h3><i class="fas fa-shield-alt"></i> Digital Wellness Strategies</h3>
+                <ul class="action-list">
+                    <li>Set specific times for social media use</li>
+                    <li>Use app timers and screen time limits</li>
+                    <li>Turn off non-essential notifications</li>
+                    <li>Create phone-free zones and times</li>
+                    <li>Practice mindful browsing habits</li>
+                    <li>Find offline activities and hobbies</li>
+                </ul>
+            </div>
+
+            <div class="action-group">
+                <h3><i class="fas fa-hands-helping"></i> Support & Resources</h3>
+                <ul class="action-list">
+                    <li>Digital Wellness Support Groups</li>
+                    <li>Mental Health Counseling Services</li>
+                    <li>Screen Time Management Apps</li>
+                    <li>Digital Detox Programs</li>
+                    <li>Mindfulness and Meditation Resources</li>
+                </ul>
+            </div>
+
+            <div class="action-group">
+                <h3><i class="fas fa-video"></i> Educational Videos</h3>
+                <div class="video-grid" style="display: grid; gap: 4rem;">
+                    <div>
+                        <h4 style="margin-bottom: 2rem; color: var(--primary-dark); font-size: 1.4rem; text-align: center;">Understanding Social Media Addiction</h4>
+                        <div class="video-wrapper" style="position: relative; padding-bottom: 85%; height: 0; overflow: hidden; border-radius: var(--radius-sm); box-shadow: var(--shadow-lg);">
+                            <iframe 
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                                src="https://www.youtube.com/embed/GCxDCvb75n4"
+                                title="Understanding Social Media Addiction"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 2rem; color: var(--primary-dark); font-size: 1.4rem; text-align: center;">Digital Wellness Tips</h4>
+                        <div class="video-wrapper" style="position: relative; padding-bottom: 85%; height: 0; overflow: hidden; border-radius: var(--radius-sm); box-shadow: var(--shadow-lg);">
+                            <iframe 
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                                src="https://www.youtube.com/embed/Czg_9C7gw0o"
+                                title="Digital Wellness Tips"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- My Account Modal -->
+    <div id="myAccountModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeMyAccountModal()">&times;</span>
+            <h2>My Account</h2>
+
+            <div class="action-group">
+                <h3><i class="fas fa-book"></i> My Reflections</h3>
+                <div id="reflectionHistory" style="max-height: 300px; overflow-y: auto; padding: 1rem; background: var(--background); border-radius: var(--radius-sm); margin-bottom: 2rem;">
+                    <!-- Reflection entries will be added here dynamically -->
+                </div>
+            </div>
+
+            <div class="action-group">
+                <h3><i class="fas fa-feather"></i> Today's Reflection</h3>
+                <div style="background: var(--background); padding: 1rem; border-radius: var(--radius-sm);">
+                    <div class="reflection-tabs" style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                        <button onclick="switchReflectionTab('personal')" class="reflection-tab active" style="padding: 0.5rem 1rem; border: none; border-radius: var(--radius-sm); background: var(--primary); color: white; cursor: pointer;">
+                            <i class="fas fa-user"></i> Personal
+                        </button>
+                        <button onclick="switchReflectionTab('spiritual')" class="reflection-tab" style="padding: 0.5rem 1rem; border: none; border-radius: var(--radius-sm); background: var(--background); color: var(--text); cursor: pointer;">
+                            <i class="fas fa-pray"></i> Spiritual
+                        </button>
+                        <button onclick="switchReflectionTab('gratitude')" class="reflection-tab" style="padding: 0.5rem 1rem; border: none; border-radius: var(--radius-sm); background: var(--background); color: var(--text); cursor: pointer;">
+                            <i class="fas fa-heart"></i> Gratitude
+                        </button>
+                    </div>
+                    
+                    <div id="personalReflection" class="reflection-content" style="display: block;">
+                        <textarea class="reflection-input" placeholder="Share your personal reflections..." style="width: 100%; min-height: 100px; padding: 0.5rem; border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 1rem;"></textarea>
+                    </div>
+                    
+                    <div id="spiritualReflection" class="reflection-content" style="display: none;">
+                        <textarea class="reflection-input" placeholder="Share your spiritual insights..." style="width: 100%; min-height: 100px; padding: 0.5rem; border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 1rem;"></textarea>
+                    </div>
+                    
+                    <div id="gratitudeReflection" class="reflection-content" style="display: none;">
+                        <textarea class="reflection-input" placeholder="Express your gratitude..." style="width: 100%; min-height: 100px; padding: 0.5rem; border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 1rem;"></textarea>
+                    </div>
+                    
+                    <button onclick="saveReflection()" style="background: var(--primary); color: white; border: none; padding: 0.5rem 1rem; border-radius: var(--radius-sm); cursor: pointer; float: right;">
+                        <i class="fas fa-save"></i> Save Reflection
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Remove login-related styles */
+        .header-login-button,
+        .login-form,
+        .form-group,
+        .submit-button {
+            display: none;
+        }
+    </style>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Theme functionality
+        const themeToggle = document.getElementById('themeToggle');
+        
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.body.setAttribute('data-theme', savedTheme);
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Modal functionality
+        function openSexualHarassmentModal() {
+            document.getElementById('sexualHarassmentModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSexualHarassmentModal() {
+            document.getElementById('sexualHarassmentModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function openPeerPressureModal() {
+            document.getElementById('peerPressureModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePeerPressureModal() {
+            document.getElementById('peerPressureModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function openCyberbullyingModal() {
+            document.getElementById('cyberbullyingModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCyberbullyingModal() {
+            document.getElementById('cyberbullyingModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function openHarmfulPranksModal() {
+            document.getElementById('harmfulPranksModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeHarmfulPranksModal() {
+            document.getElementById('harmfulPranksModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function openSocialMediaModal() {
+            document.getElementById('socialMediaModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSocialMediaModal() {
+            document.getElementById('socialMediaModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function openMyAccountModal() {
+            document.getElementById('myAccountModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            document.getElementById('profileMenu').style.display = 'none';
+            updateReflectionHistory();
+        }
+
+        function closeMyAccountModal() {
+            document.getElementById('myAccountModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const sexualHarassmentModal = document.getElementById('sexualHarassmentModal');
+            const peerPressureModal = document.getElementById('peerPressureModal');
+            const cyberbullyingModal = document.getElementById('cyberbullyingModal');
+            const harmfulPranksModal = document.getElementById('harmfulPranksModal');
+            const socialMediaModal = document.getElementById('socialMediaModal');
+            const myAccountModal = document.getElementById('myAccountModal');
+            
+            if (event.target == sexualHarassmentModal) {
+                closeSexualHarassmentModal();
+            }
+            if (event.target == peerPressureModal) {
+                closePeerPressureModal();
+            }
+            if (event.target == cyberbullyingModal) {
+                closeCyberbullyingModal();
+            }
+            if (event.target == harmfulPranksModal) {
+                closeHarmfulPranksModal();
+            }
+            if (event.target == socialMediaModal) {
+                closeSocialMediaModal();
+            }
+            if (event.target == myAccountModal) {
+                closeMyAccountModal();
+            }
+        }
+
+        function showLoginForm() {
+            const loginForm = document.getElementById('loginForm');
+            loginForm.style.display = 'block';
+            loginForm.style.animation = 'slideIn 0.3s ease';
+        }
+
+        function handleLogin() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            if (!email || !password) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Generate a unique seed based on email for consistent AI profile picture
+            const seed = email.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+            
+            // Create AI profile picture URL using DiceBear API
+            const profilePicUrl = `https://api.dicebear.com/7.x/personas/svg?seed=${seed}&backgroundColor=b6e3f4`;
+            
+            // Update profile display
+            document.getElementById('profilePicture').src = profilePicUrl;
+            document.getElementById('userEmail').textContent = email;
+            document.getElementById('profileContainer').style.display = 'flex';
+            
+            // Store login state
+            localStorage.setItem('userEmail', email);
+            localStorage.setItem('profilePicUrl', profilePicUrl);
+            localStorage.setItem('userPreference', JSON.stringify({
+                choice: 'logged_in',
+                timestamp: new Date().getTime()
+            }));
+            
+            // Hide login notification
+            document.getElementById('loginNotification').style.display = 'none';
+        }
+
+        function stayAnonymous() {
+            // Store anonymous preference
+            localStorage.setItem('userPreference', JSON.stringify({
+                choice: 'anonymous',
+                timestamp: new Date().getTime()
+            }));
+            
+            // Hide login notification
+            document.getElementById('loginNotification').style.display = 'none';
+        }
+
+        function logout() {
+            // Clear all user-related data from localStorage
+            localStorage.removeItem('userPreference');
+            localStorage.removeItem('userEmail');
+            localStorage.removeItem('profilePicUrl');
+            
+            // Reset UI
+            document.getElementById('profileContainer').style.display = 'none';
+            document.getElementById('loginNotification').style.display = 'block';
+            location.reload();
+        }
+
+        // Check if user has already made a choice
+        window.addEventListener('load', () => {
+            const userPreference = localStorage.getItem('userPreference');
+            const userEmail = localStorage.getItem('userEmail');
+            
+            // Only hide notification if user is logged in or explicitly chose to stay anonymous
+            if (userEmail || (userPreference && JSON.parse(userPreference).choice === 'anonymous')) {
+                document.getElementById('loginNotification').style.display = 'none';
+            } else {
+                document.getElementById('loginNotification').style.display = 'block';
+            }
+        });
+
+        function switchReflectionTab(tabName) {
+            // Update tab styles
+            document.querySelectorAll('.reflection-tab').forEach(tab => {
+                if (tab.textContent.toLowerCase().includes(tabName)) {
+                    tab.style.background = 'var(--primary)';
+                    tab.style.color = 'white';
+                } else {
+                    tab.style.background = 'var(--background)';
+                    tab.style.color = 'var(--text)';
+                }
+            });
+            
+            // Show/hide content
+            document.querySelectorAll('.reflection-content').forEach(content => {
+                content.style.display = 'none';
+            });
+            document.getElementById(tabName + 'Reflection').style.display = 'block';
+        }
+
+        function saveReflection() {
+            const activeTab = Array.from(document.querySelectorAll('.reflection-tab'))
+                .find(tab => tab.style.background.includes('var(--primary)'))
+                .textContent.toLowerCase().split(' ')[1];
+            const reflectionText = document.querySelector(`#${activeTab}Reflection textarea`).value.trim();
+            
+            if (reflectionText) {
+                const reflections = JSON.parse(localStorage.getItem('reflections') || '[]');
+                reflections.push({
+                    type: activeTab,
+                    text: reflectionText,
+                    date: new Date().toISOString()
+                });
+                localStorage.setItem('reflections', JSON.stringify(reflections));
+                
+                // Clear the textarea
+                document.querySelector(`#${activeTab}Reflection textarea`).value = '';
+                
+                // Update reflection history
+                updateReflectionHistory();
+            }
+        }
+
+        function updateReflectionHistory() {
+            const reflectionHistory = document.getElementById('reflectionHistory');
+            const reflections = JSON.parse(localStorage.getItem('reflections') || '[]');
+            
+            reflectionHistory.innerHTML = reflections.length ? '' : '<p style="color: var(--text-light);">No reflections yet.</p>';
+            
+            reflections.reverse().forEach(reflection => {
+                const date = new Date(reflection.date).toLocaleDateString();
+                const typeIcon = {
+                    personal: 'user',
+                    spiritual: 'pray',
+                    gratitude: 'heart'
+                }[reflection.type];
+                
+                reflectionHistory.innerHTML += `
+                    <div style="border-bottom: 1px solid var(--border); padding: 1rem 0; margin-bottom: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                            <i class="fas fa-${typeIcon}" style="color: var(--primary);"></i>
+                            <span style="font-weight: 600; color: var(--primary);">${reflection.type.charAt(0).toUpperCase() + reflection.type.slice(1)} Reflection</span>
+                            <span style="margin-left: auto; color: var(--text-light); font-size: 0.9rem;">${date}</span>
+                        </div>
+                        <p style="color: var(--text); line-height: 1.5;">${reflection.text}</p>
+                    </div>
+                `;
+            });
+        }
+
+        // Show login notification
+        function showLoginNotification() {
+            const notification = document.getElementById('loginNotification');
+            if (notification) {
+                notification.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html> 

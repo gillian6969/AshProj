@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth Plan - Path to Awareness and Growth</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="bubble-background">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+    <button id="themeToggle" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+    <div class="app-container">
+        <header class="main-header">
+            <div class="header-content">
+                <h1>Path to Awareness and Growth</h1>
+                <p class="header-subtitle">Begin your journey to self-discovery</p>
+                <!-- Add profile container -->
+                <div id="profileContainer" class="profile-container">
+                    <div class="profile-wrapper">
+                        <img id="profilePicture" alt="Profile" class="profile-picture">
+                        <div id="profileMenu" class="profile-menu">
+                            <div class="profile-menu-item" onclick="openMyAccountModal()">
+                                My Account
+                            </div>
+                            <div class="profile-menu-logout" onclick="logout()">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Logout</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span id="userEmail" class="user-email"></span>
+                </div>
+            </div>
+        </header>
+
+        <nav class="main-nav">
+            <a href="home.html" class="nav-button" target="_self">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="plan.html" class="nav-button active" target="_self">
+                <i class="fas fa-map"></i>
+                <span>Plan</span>
+            </a>
+            <a href="bible.html" class="nav-button" target="_self">
+                <i class="fas fa-book"></i>
+                <span>Bible</span>
+            </a>
+            <a href="contacts.html" class="nav-button" target="_self">
+                <i class="fas fa-address-book"></i>
+                <span>Contacts</span>
+            </a>
+        </nav>
+
+        <main class="main-content">
+            <div class="section-header">
+                <h2>Your Growth Plan</h2>
+                <p>A structured approach to personal development</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>What You Can Do</h3>
+                        <p>Everyone has a role to play in creating a safer digital space. Click below to learn how you can take action.</p>
+                        <a href="#" class="btn-action" onclick="openActionModal()">Get Started</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Resources & Tools</h3>
+                        <p>Access essential tools and resources for digital safety and awareness.</p>
+                        <a href="#" class="btn-action" onclick="openResourcesModal()">Get Started</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Join the Movement</h3>
+                        <p>Be part of the community working towards a safer digital environment.</p>
+                        <a href="#" class="btn-action" onclick="openSupportModal()">Support Others</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Partner with Us</h3>
+                        <p>Join our network of organizations and individuals committed to creating safer digital spaces.</p>
+                        <a href="#" class="btn-action" onclick="openPartnerModal()">Get Connected</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Understanding the Issue</h3>
+                        <p>Learn about the impact of harmful trends and how they affect our community.</p>
+                        <a href="#" class="btn-action" onclick="openUnderstandingModal()">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Action Modal -->
+        <div id="actionModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeActionModal()">&times;</span>
+                <h2>Taking Action for a Safer Digital Space</h2>
+                
+                <div class="action-group">
+                    <h3><i class="fas fa-graduation-cap"></i> For Students</h3>
+                    <ul class="action-list">
+                        <li>🚫 Think Before You Join a Trend – Ask yourself: Is this safe? Is this legal?</li>
+                        <li>📢 Speak Up – If you see a dangerous challenge, warn your peers.</li>
+                        <li>⚠ Report Harmful Content – TikTok allows you to flag dangerous videos.</li>
+                        <li>🤝 Support Mental Well-being – Be mindful of how trends affect your mental health and others'.</li>
+                    </ul>
+                </div>
+
+                <div class="action-group">
+                    <h3><i class="fas fa-users"></i> For Parents</h3>
+                    <ul class="action-list">
+                        <li>🧐 Stay Informed – Learn about viral challenges and their potential risks.</li>
+                        <li>🗣 Have Open Conversations – Talk to your children about peer pressure, social media, and online safety.</li>
+                        <li>📵 Set Digital Boundaries – Monitor and set time limits for TikTok usage.</li>
+                        <li>🚨 Encourage Reporting – Teach your kids how to report harmful content.</li>
+                    </ul>
+                </div>
+
+                <div class="action-group">
+                    <h3><i class="fas fa-chalkboard-teacher"></i> For Educators</h3>
+                    <ul class="action-list">
+                        <li>📚 Teach Digital Literacy – Integrate discussions on responsible social media use into school lessons.</li>
+                        <li>🎤 Organize Awareness Campaigns – Conduct seminars or invite experts to speak about social media safety.</li>
+                        <li>🔍 Monitor Trends – Stay updated on what students are engaging with online.</li>
+                    </ul>
+                </div>
+
+                <div class="action-group">
+                    <h3><i class="fas fa-landmark"></i> For Policymakers & Community Leaders</h3>
+                    <ul class="action-list">
+                        <li>🏛 Advocate for Stronger Regulations – Push for stricter laws on social media content moderation.</li>
+                        <li>🤝 Collaborate with Schools – Implement school programs on safe internet use.</li>
+                        <li>📢 Engage with TikTok & Other Platforms – Call for better safety measures and reporting tools.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resources Modal -->
+        <div id="resourcesModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeResourcesModal()">&times;</span>
+                <h2>Digital Safety Resources & Tools</h2>
+                
+                <div class="action-group">
+                    <h3><i class="fas fa-file-download"></i> Parent & Educator Guide</h3>
+                    <ul class="action-list">
+                        <li>✔ Comprehensive guide on discussing TikTok safety with teens</li>
+                        <li>✔ Age-appropriate conversation starters</li>
+                        <li>✔ Risk prevention strategies</li>
+                    </ul>
+                </div>
+
+                <div class="action-group">
+                    <h3><i class="fas fa-toolkit"></i> Safe Social Media Toolkit</h3>
+                    <ul class="action-list">
+                        <li>✔ Privacy setting recommendations</li>
+                        <li>✔ Digital footprint management</li>
+                        <li>✔ Online behavior checklists</li>
+                    </ul>
+                </div>
+
+                <div class="action-group">
+                    <h3><i class="fas fa-chart-bar"></i> Infographic Generator</h3>
+                    <ul class="action-list">
+                        <li>✔ Customizable awareness templates</li>
+                        <li>✔ Social media-ready formats</li>
+                        <li>✔ Data visualization tools</li>
+                    </ul>
+                </div>
+
+                <div class="action-group">
+                    <h3><i class="fas fa-chalkboard"></i> Student Workshops</h3>
+                    <ul class="action-list">
+                        <li>✔ Interactive online sessions</li>
+                        <li>✔ Peer-led discussions</li>
+                        <li>✔ Certificate programs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Partner Modal -->
+        <div id="partnerModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closePartnerModal()">&times;</span>
+                <h2>Partnership Opportunities</h2>
+                
+                <div class="action-group">
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.6;">
+                        We are looking for schools, mental health organizations, and local government units to collaborate on educational programs, awareness campaigns, and policy advocacy.
+                    </p>
+
+                    <div class="action-group">
+                        <h3><i class="fas fa-school"></i> For Schools</h3>
+                        <ul class="action-list">
+                            <li>🔹 Integrate our educational materials into your curriculum.</li>
+                        </ul>
+                    </div>
+
+                    <div class="action-group">
+                        <h3><i class="fas fa-heart"></i> For NGOs & Mental Health Groups</h3>
+                        <ul class="action-list">
+                            <li>🔹 Provide expert insights on teen behavior and media impact.</li>
+                        </ul>
+                    </div>
+
+                    <div class="action-group">
+                        <h3><i class="fas fa-landmark"></i> For Government Officials</h3>
+                        <ul class="action-list">
+                            <li>🔹 Work with us to strengthen digital safety policies in the Philippines.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Support Modal -->
+        <div id="supportModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeSupportModal()">&times;</span>
+                <h2>Support the Movement</h2>
+                
+                <div class="action-group">
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.6;">
+                        Make a difference today! Here's how you can take action:
+                    </p>
+
+                    <div class="action-group">
+                        <h3><i class="fas fa-file-signature"></i> Sign the Petition</h3>
+                        <ul class="action-list">
+                            <li>📜 Help us urge TikTok to strengthen its content moderation policies and take action against harmful trends.</li>
+                        </ul>
+                    </div>
+
+                    <div class="action-group">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Report Dangerous Trends</h3>
+                        <ul class="action-list">
+                            <li>⚠ Use our anonymous reporting tool to flag unsafe TikTok challenges so we can spread awareness and alert relevant authorities.</li>
+                        </ul>
+                    </div>
+
+                    <div class="action-group">
+                        <h3><i class="fas fa-hands-helping"></i> Take the Pledge</h3>
+                        <ul class="action-list">
+                            <li>🤝 Pledge to be a responsible social media user and help create a safer TikTok community! Share your pledge on social media to encourage others.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Understanding Modal -->
+        <div id="understandingModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeUnderstandingModal()">&times;</span>
+                <h2>How TikTok Trends Influence Risky Behavior</h2>
+                
+                <div class="action-group">
+                    <h3><i class="fas fa-exclamation-circle"></i> Key Concerns</h3>
+                    <ul class="action-list">
+                        <li>✔ Trends often spread rapidly, making it hard to control harmful content.</li>
+                        <li>✔ Some challenges promote reckless actions, such as dangerous stunts, self-harm, or substance use.</li>
+                        <li>✔ Teens are highly influenced by peer pressure and social validation, increasing participation in viral but risky behaviors.</li>
+                        <li>✔ TikTok's algorithm can unintentionally promote dangerous trends by pushing viral content.</li>
+                    </ul>
+                </div>
+
+                <div class="action-group">
+                    <h3><i class="fas fa-search"></i> What Our Research Shows</h3>
+                    <ul class="action-list">
+                        <li>📌 Percentage of high school students in Zaragoza who have attempted viral challenges.</li>
+                        <li>📌 Case studies of real incidents linked to TikTok trends.</li>
+                        <li>📌 Insights into how TikTok's platform policies affect content moderation.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- My Account Modal -->
+        <div id="myAccountModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeMyAccountModal()">&times;</span>
+                <h2>My Account</h2>
+
+                <div class="action-group">
+                    <h3><i class="fas fa-book"></i> My Reflections</h3>
+                    <div id="reflectionHistory" style="max-height: 300px; overflow-y: auto; padding: 1rem; background: var(--background); border-radius: var(--radius-sm); margin-bottom: 2rem;">
+                        <!-- Reflection entries will be added here dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Feature -->
+        <div class="chat-widget">
+            <button class="chat-toggle" aria-label="Toggle chat">
+                <i class="fas fa-comments"></i>
+            </button>
+            
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h3>Support Guide</h3>
+                    <div class="chat-actions">
+                        <button class="close-chat" title="Close">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="chat-messages"></div>
+                
+                <div class="chat-input-container">
+                    <textarea class="chat-input" placeholder="Share your thoughts..." rows="3"></textarea>
+                    <button class="send-message" title="Send">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Modal functionality
+        function openActionModal() {
+            document.getElementById('actionModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeActionModal() {
+            document.getElementById('actionModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function openResourcesModal() {
+            document.getElementById('resourcesModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeResourcesModal() {
+            document.getElementById('resourcesModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function openPartnerModal() {
+            document.getElementById('partnerModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePartnerModal() {
+            document.getElementById('partnerModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function openSupportModal() {
+            document.getElementById('supportModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSupportModal() {
+            document.getElementById('supportModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function openUnderstandingModal() {
+            document.getElementById('understandingModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeUnderstandingModal() {
+            document.getElementById('understandingModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modals when clicking outside
+        window.onclick = function(event) {
+            const actionModal = document.getElementById('actionModal');
+            const resourcesModal = document.getElementById('resourcesModal');
+            const partnerModal = document.getElementById('partnerModal');
+            const supportModal = document.getElementById('supportModal');
+            const understandingModal = document.getElementById('understandingModal');
+            if (event.target == actionModal) {
+                closeActionModal();
+            }
+            if (event.target == resourcesModal) {
+                closeResourcesModal();
+            }
+            if (event.target == partnerModal) {
+                closePartnerModal();
+            }
+            if (event.target == supportModal) {
+                closeSupportModal();
+            }
+            if (event.target == understandingModal) {
+                closeUnderstandingModal();
+            }
+        }
+
+        // Add profile picture click handler
+        document.addEventListener('DOMContentLoaded', () => {
+            const profilePic = document.getElementById('profilePicture');
+            const profileMenu = document.getElementById('profileMenu');
+            
+            if (profilePic) {
+                profilePic.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    profileMenu.style.display = profileMenu.style.display === 'none' ? 'block' : 'none';
+                });
+            }
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', () => {
+                if (profileMenu) {
+                    profileMenu.style.display = 'none';
+                }
+            });
+
+            // Check if user was previously logged in
+            const userEmail = localStorage.getItem('userEmail');
+            const profilePicUrl = localStorage.getItem('profilePicUrl');
+            if (userEmail && profilePicUrl) {
+                document.getElementById('profilePicture').src = profilePicUrl;
+                document.getElementById('userEmail').textContent = userEmail;
+                document.getElementById('profileContainer').style.display = 'flex';
+            }
+        });
+
+        function logout() {
+            // Clear all user-related data from localStorage
+            localStorage.removeItem('userPreference');
+            localStorage.removeItem('userEmail');
+            localStorage.removeItem('profilePicUrl');
+            
+            // Reset UI
+            document.getElementById('profileContainer').style.display = 'none';
+            location.reload();
+        }
+
+        function openMyAccountModal() {
+            document.getElementById('myAccountModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            document.getElementById('profileMenu').style.display = 'none';
+            updateReflectionHistory();
+        }
+
+        function closeMyAccountModal() {
+            document.getElementById('myAccountModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function switchReflectionTab(tabName) {
+            // Update tab styles
+            document.querySelectorAll('.reflection-tab').forEach(tab => {
+                if (tab.textContent.toLowerCase().includes(tabName)) {
+                    tab.style.background = 'var(--primary)';
+                    tab.style.color = 'white';
+                } else {
+                    tab.style.background = 'var(--background)';
+                    tab.style.color = 'var(--text)';
+                }
+            });
+            
+            // Show/hide content
+            document.querySelectorAll('.reflection-content').forEach(content => {
+                content.style.display = 'none';
+            });
+            document.getElementById(tabName + 'Reflection').style.display = 'block';
+        }
+
+        function saveReflection() {
+            const activeTab = Array.from(document.querySelectorAll('.reflection-tab'))
+                .find(tab => tab.style.background.includes('var(--primary)'))
+                .textContent.toLowerCase().split(' ')[1];
+            const reflectionText = document.querySelector(`#${activeTab}Reflection textarea`).value.trim();
+            
+            if (reflectionText) {
+                const reflections = JSON.parse(localStorage.getItem('reflections') || '[]');
+                reflections.push({
+                    type: activeTab,
+                    text: reflectionText,
+                    date: new Date().toISOString()
+                });
+                localStorage.setItem('reflections', JSON.stringify(reflections));
+                
+                // Clear the textarea
+                document.querySelector(`#${activeTab}Reflection textarea`).value = '';
+                
+                // Update reflection history
+                updateReflectionHistory();
+            }
+        }
+
+        function updateReflectionHistory() {
+            const reflectionHistory = document.getElementById('reflectionHistory');
+            const reflections = JSON.parse(localStorage.getItem('reflections') || '[]');
+            
+            reflectionHistory.innerHTML = reflections.length ? '' : '<p style="color: var(--text-light);">No reflections yet.</p>';
+            
+            reflections.reverse().forEach((reflection, index) => {
+                const date = new Date(reflection.date).toLocaleDateString();
+                const typeIcon = {
+                    personal: 'user',
+                    spiritual: 'pray',
+                    gratitude: 'heart'
+                }[reflection.type];
+                
+                reflectionHistory.innerHTML += `
+                    <div style="border-bottom: 1px solid var(--border); padding: 1rem 0; margin-bottom: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                            <i class="fas fa-${typeIcon}" style="color: var(--primary);"></i>
+                            <span style="font-weight: 600; color: var(--primary);">${reflection.type.charAt(0).toUpperCase() + reflection.type.slice(1)} Reflection</span>
+                            <span style="margin-left: auto; color: var(--text-light); font-size: 0.9rem;">${date}</span>
+                            <button onclick="deleteReflection(${index})" style="background: none; border: none; color: var(--text-light); cursor: pointer; padding: 0.25rem; margin-left: 0.5rem; transition: color 0.3s ease;">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                        <p style="color: var(--text); line-height: 1.5;">${reflection.text}</p>
+                    </div>
+                `;
+            });
+        }
+
+        function deleteReflection(index) {
+            const reflections = JSON.parse(localStorage.getItem('reflections') || '[]');
+            reflections.reverse(); // Reverse to match the display order
+            reflections.splice(index, 1); // Remove the reflection at the index
+            reflections.reverse(); // Reverse back to original order
+            localStorage.setItem('reflections', JSON.stringify(reflections));
+            updateReflectionHistory(); // Refresh the display
+        }
+
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const icon = themeToggle.querySelector('i');
+        
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.body.setAttribute('data-theme', savedTheme);
+            icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+        
+        // Toggle theme
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            // Update icon
+            icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        });
+    </script>
+</body>
+
+</html> 

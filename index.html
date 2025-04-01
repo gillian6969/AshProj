@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Path to Awareness and Growth</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .splash-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            background: var(--background);
+            color: var(--text);
+        }
+
+        .splash-logo {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+        }
+
+        .splash-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        .splash-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            color: var(--text);
+        }
+
+        .start-button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-sm);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .start-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            background: var(--primary-dark);
+        }
+    </style>
+</head>
+<body>
+    <div class="splash-container">
+        <div class="splash-logo">
+            <i class="fas fa-seedling"></i>
+        </div>
+        <h1 class="splash-title">Path to Awareness and Growth</h1>
+        <p class="splash-subtitle">Begin your journey to self-discovery and spiritual growth</p>
+        <button onclick="startJourney()" class="start-button">
+            <span>Start Your Journey</span>
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+
+    <script>
+        function startJourney() {
+            window.location.href = "home.html";
+        }
+    </script>
+</body>
+</html> 
