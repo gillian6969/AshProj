@@ -29,23 +29,8 @@
                     <img src="https://scontent.fmnl17-7.fna.fbcdn.net/v/t1.15752-9/480023749_2028812964285065_3089753549494548426_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeGPba8JZk0kE7UqCBPlrs2Ta_cqTvDQCRNr9ypO8NAJE5Awl9H8U3KVsH45wZmUdBGEdiU_JEp_BkUQz86D677H&_nc_ohc=jFzkVazauv8Q7kNvgEoopwE&_nc_oc=Adn3qJ1YBw8TLB1uFb54UF0TRmwBSzQ_JQPTRzrByHiFY1wgjAgxgu46qcPg4RDdloo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl17-7.fna&oh=03_Q7cD1wEcVyd6qDk12PoaFz3_5DaF0R6x-yYwz2p9IyOnO4LTCA&oe=680A4BD1" alt="Awareness and Growth" class="header-image">
                 </div>
                 <p class="header-subtitle">Begin your journey to self-discovery</p>
-                <!-- Add profile container -->
-                <div id="profileContainer" class="profile-container">
-                    <div class="profile-wrapper">
-                        <img id="profilePicture" alt="Profile" class="profile-picture">
-                        <div id="profileMenu" class="profile-menu">
-                            <div class="profile-menu-item" onclick="openMyAccountModal()">
-                                My Account
-                            </div>
-                            <div class="profile-menu-logout" onclick="logout()">
-                                <i class="fas fa-sign-out-alt"></i>
-                                <span>Logout</span>
-                            </div>
-                        </div>
-                    </div>
-                    <span id="userEmail" class="user-email"></span>
-                </div>
                 <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
                 </button>
             </div>
         </header>
@@ -59,9 +44,9 @@
                 <i class="fas fa-map"></i>
                 <span>Plan</span>
             </a>
-            <a href="bible.html" class="nav-button" target="_self">
-                <i class="fas fa-book"></i>
-                <span>Bible</span>
+            <a href="freedom_wall.php" class="nav-button" target="_self">
+                <i class="fas fa-comment-dots"></i>
+                <span>Freedom Wall</span>
             </a>
             <a href="contacts.html" class="nav-button" target="_self">
                 <i class="fas fa-address-book"></i>
@@ -70,38 +55,6 @@
         </nav>
 
         <main class="main-content">
-            <!-- Login Notification Banner -->
-            <div id="loginNotification" class="login-notification">
-                <div class="login-notification-content">
-                    <i class="fas fa-user-circle login-notification-icon"></i>
-                    <span class="login-notification-message">Welcome! Please log in or continue as anonymous</span>
-                </div>
-                <div class="login-notification-buttons">
-                    <button onclick="showLoginForm()" class="login-btn">
-                        <i class="fas fa-sign-in-alt"></i>
-                        Login
-                    </button>
-                    <button onclick="stayAnonymous()" class="anonymous-btn">
-                        <i class="fas fa-user-secret"></i>
-                        Stay Anonymous
-                    </button>
-                </div>
-                <div id="loginForm" class="login-form" style="display: none;">
-                    <div class="form-field">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" required class="form-input" placeholder="Enter your email">
-                    </div>
-                    <div class="form-field">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" required class="form-input" placeholder="Enter your password">
-                    </div>
-                    <button onclick="handleLogin()" class="submit-btn">
-                        <i class="fas fa-sign-in-alt"></i>
-                        Sign In
-                    </button>
-                </div>
-            </div>
-
             <div class="section-header">
                 <h2>Welcome to Your Journey</h2>
                 <p>Discover your path to personal growth and spiritual awareness</p>
@@ -251,8 +204,34 @@
                 
                 <div class="chat-messages"></div>
                 
+                <div class="mood-selector">
+                    <h4>How are you feeling today?</h4>
+                    <div class="mood-options">
+                        <button class="mood-option" data-mood="happy">
+                            <i class="fas fa-smile"></i>
+                            <span>Happy</span>
+                        </button>
+                        <button class="mood-option" data-mood="sad">
+                            <i class="fas fa-frown"></i>
+                            <span>Sad</span>
+                        </button>
+                        <button class="mood-option" data-mood="anxious">
+                            <i class="fas fa-tired"></i>
+                            <span>Anxious</span>
+                        </button>
+                        <button class="mood-option" data-mood="peaceful">
+                            <i class="fas fa-dove"></i>
+                            <span>Peaceful</span>
+                        </button>
+                        <button class="mood-option" data-mood="confused">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Confused</span>
+                        </button>
+                    </div>
+                </div>
+                
                 <div class="chat-input-container">
-                    <textarea class="chat-input" placeholder="Share your thoughts..." rows="3"></textarea>
+                    <textarea class="chat-input" placeholder="Share your thoughts..." rows="2"></textarea>
                     <button class="send-message" title="Send">
                         <i class="fas fa-paper-plane"></i>
                     </button>
@@ -650,11 +629,13 @@
     <script>
         // Theme functionality
         const themeToggle = document.getElementById('themeToggle');
+        const icon = themeToggle.querySelector('i');
         
         // Check for saved theme preference
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme) {
             document.body.setAttribute('data-theme', savedTheme);
+            icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
         }
 
         themeToggle.addEventListener('click', () => {
@@ -663,6 +644,242 @@
             
             document.body.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
+            
+            // Update icon
+            icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        });
+
+        // Chat functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatToggle = document.querySelector('.chat-toggle');
+            const chatContainer = document.querySelector('.chat-container');
+            const closeChat = document.querySelector('.close-chat');
+            const chatMessages = document.querySelector('.chat-messages');
+            const chatInput = document.querySelector('.chat-input');
+            const sendMessage = document.querySelector('.send-message');
+            const moodOptions = document.querySelectorAll('.mood-option');
+            
+            let selectedMood = null;
+            
+            // Mood response templates with specific advice
+            const moodResponses = {
+                happy: [
+                    "It's wonderful to hear you're feeling happy today! This is a great time to journal about what's bringing you joy so you can reflect on these moments later. What's making you feel joyful right now?",
+                    "Your happiness is a blessing! Consider using this positive energy to reach out to someone you care about or start a creative project you've been thinking about. What made your day special?",
+                    "Wonderful to hear you're in good spirits! Happiness often comes when we're aligned with our values. What activities or people in your life are contributing to this positive feeling?"
+                ],
+                sad: [
+                    "I'm sorry you're feeling sad today. Remember that acknowledging your emotions is an important part of healing. Try taking a few minutes for self-compassion - perhaps a warm drink, gentle music, or a short walk outside. Would you like to share what's troubling you?",
+                    "When sadness visits, it often has something to teach us. Consider journaling about your feelings or speaking with a trusted friend. Also, physical movement—even just stretching—can help shift your emotional state. What specific situation is bringing you down?",
+                    "It's okay to feel sad. During these times, mindfulness practices can help you process emotions without being overwhelmed by them. Focus on your breath for a few minutes, then check if there's a small, nurturing action you could take for yourself today."
+                ],
+                anxious: [
+                    "I understand anxiety can be challenging. Try this grounding exercise: name 5 things you see, 4 things you can touch, 3 things you hear, 2 things you smell, and 1 thing you taste. This helps bring you back to the present moment. What's causing your anxiety today?",
+                    "When anxiety arises, our thoughts often race to the future. The 4-7-8 breathing technique can help: inhale for 4 counts, hold for 7, exhale for 8. Also, writing down your worries can help externalize them. What specific concerns are on your mind?",
+                    "Anxiety often comes with physical tension. Try progressive muscle relaxation: tighten and then release each muscle group from toes to head. Remember that most of what we worry about never happens. What particular situation is making you feel this way?"
+                ],
+                peaceful: [
+                    "It's wonderful that you're feeling peaceful. This is an ideal state for reflection and gentle decision-making. Consider using this clarity to revisit your personal goals or connect with your spiritual practice. What practices help you maintain this sense of calm?",
+                    "Peace of mind is truly valuable. This is a good time to engage with inspirational content or practice gratitude by listing specific things you appreciate. How might you extend this peaceful feeling to others in your life today?",
+                    "That serene feeling is something to cherish. Consider meditating to deepen this state, or perhaps engage in a creative activity that flows naturally from this calm place. What contributed to your sense of peace today?"
+                ],
+                confused: [
+                    "Feeling confused is completely normal. Sometimes writing out the situation in a structured way can help—try noting the facts, your feelings, and possible actions separately. Would it help to break down what's confusing you into smaller parts?",
+                    "Confusion often resolves with patience and time. Consider talking through your thoughts with someone uninvolved in the situation, or try the 'five whys' technique—asking why repeatedly to get to the root of the issue. What specific questions are you grappling with?",
+                    "When we're confused, seeking diverse perspectives can be valuable. Consider researching different viewpoints or consulting someone with expertise in the area. Also, sometimes stepping away briefly gives our minds space to process. What specifically is difficult to understand?"
+                ]
+            };
+            
+            // Advanced message response system
+            function getAdvancedResponse(message) {
+                // Keywords for different types of issues
+                const keywords = {
+                    relationships: ['friend', 'boyfriend', 'girlfriend', 'partner', 'relationship', 'dating', 'marriage', 'family', 'parents', 'siblings'],
+                    stress: ['stress', 'overwhelm', 'pressure', 'busy', 'burnout', 'tired', 'exhausted'],
+                    purpose: ['purpose', 'meaning', 'direction', 'lost', 'confused about life', 'career', 'future', 'goals'],
+                    spirituality: ['prayer', 'meditation', 'spiritual', 'faith', 'belief', 'god', 'religion', 'practice'],
+                    selfGrowth: ['growth', 'improve', 'better', 'learn', 'develop', 'progress', 'change']
+                };
+                
+                // Check which category the message falls into
+                let category = null;
+                const lowerMessage = message.toLowerCase();
+                
+                for (const [cat, words] of Object.entries(keywords)) {
+                    if (words.some(word => lowerMessage.includes(word))) {
+                        category = cat;
+                        break;
+                    }
+                }
+                
+                // Provide advice based on category
+                switch(category) {
+                    case 'relationships':
+                        return "Relationships can be both fulfilling and challenging. When difficulties arise, open communication is key - try expressing your feelings using 'I' statements rather than accusations. Also remember that healthy boundaries allow both people to thrive. Would you like to share more about the specific relationship you're thinking about?";
+                    case 'stress':
+                        return "I notice you're mentioning stress. Your wellbeing matters deeply. Consider trying the 5-5-5 technique: breathe in for 5 seconds, hold for 5, exhale for 5. Also, breaking large tasks into smaller steps can make things more manageable. Which specific situation is causing you the most pressure right now?";
+                    case 'purpose':
+                        return "Questions about purpose and meaning are profound and important. Rather than seeking one big answer, you might explore what activities make you lose track of time or what issues genuinely move you. Journaling about your core values can also provide clarity. What aspects of life currently feel most meaningful to you?";
+                    case 'spirituality':
+                        return "Spiritual exploration is a deeply personal journey. Consider setting aside quiet time each day for reflection or prayer. Reading wisdom literature from various traditions might also provide inspiration. Remember that doubt and questions are natural parts of spiritual growth. What aspects of spirituality are you currently exploring?";
+                    case 'selfGrowth':
+                        return "Personal growth often happens when we step slightly outside our comfort zones. Consider identifying one small habit you could change this week. Also, seeking feedback from trusted friends can provide valuable perspective. In what specific area would you most like to grow right now?";
+                    default:
+                        // If no specific category is detected, provide a thoughtful generic response
+                        if (message.length < 15) {
+                            return "I'd appreciate hearing more about that. Could you share a bit more detail so I can better understand your situation?";
+                        } else if (message.includes('?')) {
+                            return "That's a thoughtful question. While I don't have all the answers, I believe reflection often leads to personal insight. What has your experience with this question been so far?";
+                        } else {
+                            return "Thank you for sharing that with me. Our conversations and reflections can be stepping stones to greater clarity. Would it help to explore this topic further, or is there another aspect of your journey you'd like to discuss?";
+                        }
+                }
+            }
+            
+            // Toggle chat visibility
+            chatToggle.addEventListener('click', function() {
+                chatContainer.style.opacity = '1';
+                chatContainer.style.visibility = 'visible';
+                chatContainer.style.transform = 'translateY(0) scale(1)';
+                
+                // Add initial welcome message if chat is empty
+                if (chatMessages.children.length === 0) {
+                    addMessage("Welcome to your spiritual guide! I'm here to support your journey of growth and reflection. How are you feeling today? You can select an option below or share directly.", 'guide');
+                }
+            });
+            
+            closeChat.addEventListener('click', function() {
+                hideChat();
+            });
+            
+            // Close chat when clicking outside
+            document.addEventListener('click', function(event) {
+                // Check if chat is visible
+                if (chatContainer.style.visibility === 'visible') {
+                    // Check if the click was outside the chat container and not on the chat toggle
+                    if (!chatContainer.contains(event.target) && event.target !== chatToggle && !chatToggle.contains(event.target)) {
+                        hideChat();
+                    }
+                }
+            });
+            
+            function hideChat() {
+                chatContainer.style.opacity = '0';
+                chatContainer.style.visibility = 'hidden';
+                chatContainer.style.transform = 'translateY(20px) scale(0.9)';
+            }
+            
+            // Handle mood selection
+            moodOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const mood = this.getAttribute('data-mood');
+                    
+                    // Reset previously selected mood
+                    moodOptions.forEach(opt => opt.classList.remove('selected'));
+                    
+                    // Select this mood
+                    this.classList.add('selected');
+                    selectedMood = mood;
+                    
+                    // Add user's mood as a message
+                    addMessage(`I'm feeling ${mood} today.`, 'user');
+                    
+                    // Minimize the mood selector to give more space for chat
+                    document.querySelector('.mood-selector').classList.add('minimized');
+                    
+                    // Respond based on mood
+                    setTimeout(() => {
+                        const responses = moodResponses[mood];
+                        const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                        addMessage(randomResponse, 'guide');
+                    }, 500);
+                });
+            });
+            
+            // Add a small button to show/hide mood selector
+            const moodSelector = document.querySelector('.mood-selector');
+            const toggleButton = document.createElement('button');
+            toggleButton.className = 'toggle-mood-selector';
+            toggleButton.innerHTML = '<i class="fas fa-smile"></i>';
+            toggleButton.title = 'Show mood options';
+            toggleButton.style.position = 'absolute';
+            toggleButton.style.right = '10px';
+            toggleButton.style.top = '10px';
+            toggleButton.style.background = 'transparent';
+            toggleButton.style.border = 'none';
+            toggleButton.style.color = 'var(--primary)';
+            toggleButton.style.fontSize = '0.9rem';
+            toggleButton.style.cursor = 'pointer';
+            toggleButton.style.padding = '5px';
+            toggleButton.style.borderRadius = '50%';
+            toggleButton.style.display = 'none';
+            
+            chatMessages.parentNode.insertBefore(toggleButton, chatMessages.nextSibling);
+            
+            toggleButton.addEventListener('click', function() {
+                if (moodSelector.classList.contains('minimized')) {
+                    moodSelector.classList.remove('minimized');
+                    this.title = 'Hide mood options';
+                    this.style.display = 'none';
+                } else {
+                    moodSelector.classList.add('minimized');
+                    this.title = 'Show mood options';
+                }
+            });
+            
+            // Toggle mood selector visibility based on chat state
+            function toggleMoodVisibility() {
+                if (selectedMood) {
+                    moodSelector.classList.add('minimized');
+                    toggleButton.style.display = 'block';
+                } else {
+                    moodSelector.classList.remove('minimized');
+                    toggleButton.style.display = 'none';
+                }
+            }
+            
+            // Show mood selector when starting chat
+            chatToggle.addEventListener('click', function() {
+                setTimeout(toggleMoodVisibility, 300);
+            });
+            
+            // Send message function
+            function sendUserMessage() {
+                const message = chatInput.value.trim();
+                if (message) {
+                    addMessage(message, 'user');
+                    chatInput.value = '';
+                    
+                    // Enhanced response logic
+                    setTimeout(() => {
+                        // Get a more tailored response
+                        const advancedResponse = getAdvancedResponse(message);
+                        addMessage(advancedResponse, 'guide');
+                    }, 500);
+                }
+            }
+            
+            // Add message to chat
+            function addMessage(text, sender) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${sender}`;
+                messageDiv.textContent = text;
+                chatMessages.appendChild(messageDiv);
+                
+                // Scroll to bottom
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+            
+            // Send message when clicking send button
+            sendMessage.addEventListener('click', sendUserMessage);
+            
+            // Send message when pressing enter (without shift for new line)
+            chatInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    sendUserMessage();
+                }
+            });
         });
 
         // Modal functionality
@@ -757,80 +974,6 @@
             }
         }
 
-        function showLoginForm() {
-            const loginForm = document.getElementById('loginForm');
-            loginForm.style.display = 'block';
-            loginForm.style.animation = 'slideIn 0.3s ease';
-        }
-
-        function handleLogin() {
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            
-            if (!email || !password) {
-                alert('Please fill in all fields');
-                return;
-            }
-            
-            // Generate a unique seed based on email for consistent AI profile picture
-            const seed = email.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
-            
-            // Create AI profile picture URL using DiceBear API
-            const profilePicUrl = `https://api.dicebear.com/7.x/personas/svg?seed=${seed}&backgroundColor=b6e3f4`;
-            
-            // Update profile display
-            document.getElementById('profilePicture').src = profilePicUrl;
-            document.getElementById('userEmail').textContent = email;
-            document.getElementById('profileContainer').style.display = 'flex';
-            
-            // Store login state
-            localStorage.setItem('userEmail', email);
-            localStorage.setItem('profilePicUrl', profilePicUrl);
-            localStorage.setItem('userPreference', JSON.stringify({
-                choice: 'logged_in',
-                timestamp: new Date().getTime()
-            }));
-            
-            // Hide login notification
-            document.getElementById('loginNotification').style.display = 'none';
-        }
-
-        function stayAnonymous() {
-            // Store anonymous preference
-            localStorage.setItem('userPreference', JSON.stringify({
-                choice: 'anonymous',
-                timestamp: new Date().getTime()
-            }));
-            
-            // Hide login notification
-            document.getElementById('loginNotification').style.display = 'none';
-        }
-
-        function logout() {
-            // Clear all user-related data from localStorage
-            localStorage.removeItem('userPreference');
-            localStorage.removeItem('userEmail');
-            localStorage.removeItem('profilePicUrl');
-            
-            // Reset UI
-            document.getElementById('profileContainer').style.display = 'none';
-            document.getElementById('loginNotification').style.display = 'block';
-            location.reload();
-        }
-
-        // Check if user has already made a choice
-        window.addEventListener('load', () => {
-            const userPreference = localStorage.getItem('userPreference');
-            const userEmail = localStorage.getItem('userEmail');
-            
-            // Only hide notification if user is logged in or explicitly chose to stay anonymous
-            if (userEmail || (userPreference && JSON.parse(userPreference).choice === 'anonymous')) {
-                document.getElementById('loginNotification').style.display = 'none';
-            } else {
-                document.getElementById('loginNotification').style.display = 'block';
-            }
-        });
-
         function switchReflectionTab(tabName) {
             // Update tab styles
             document.querySelectorAll('.reflection-tab').forEach(tab => {
@@ -898,14 +1041,6 @@
                     </div>
                 `;
             });
-        }
-
-        // Show login notification
-        function showLoginNotification() {
-            const notification = document.getElementById('loginNotification');
-            if (notification) {
-                notification.style.display = 'block';
-            }
         }
     </script>
 </body>
